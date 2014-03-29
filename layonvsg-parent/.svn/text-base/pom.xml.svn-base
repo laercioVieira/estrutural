@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.temasistemas</groupId>
+	<artifactId>tema-parent-pom</artifactId>
+	<version>01.00.00.00</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>../tema-base-pom</module>
+		<module>../tema-base-server-profiles</module>
+		<module>../tema-base-profiles</module>
+		<module>../tema-ear-server-profiles</module>
+	</modules>
+</project>
