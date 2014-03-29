@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.temasistemas</groupId>
+		<artifactId>tema-base-profiles</artifactId>
+		<version>01.00.00.00</version>
+	</parent>
+	<artifactId>tema-base-server-profiles</artifactId>
+	<packaging>pom</packaging>
+	<profiles>
+		<profile>
+			<id>jboss72xFilter</id>
+			<activation>
+				<property>
+					<name>server</name>
+					<value>jboss72x</value>
+				</property>
+			</activation>
+			<build>
+				<filters>
+					<filter>src/main/resources/META-INF/servers-filters/jboss72x.properties</filter>
+				</filters>
+			</build>
+		</profile>
+	</profiles>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>src/main/resources/META-INF/servers-filters</exclude>
+				</excludes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>
