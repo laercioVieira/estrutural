@@ -5,7 +5,7 @@
 	<artifactId>layonvsg-ear-server-profiles</artifactId>
 	<version>01.00.00</version>
 	<packaging>pom</packaging>
-	
+	<name>Módulo EAR Server Profiles</name>
 	<parent>
 		<groupId>br.com.layonvsg</groupId>
 		<artifactId>layonvsg-base-profiles</artifactId>

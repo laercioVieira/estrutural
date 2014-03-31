@@ -4,7 +4,8 @@
 	<groupId>br.com.layonvsg</groupId>
 	<artifactId>layonvsg-base-profiles</artifactId>
 	<version>01.00.00</version>
-	<name>Laerson Base Profiles</name>
+	<packaging>pom</packaging>
+	<name>Módulo Base Profiles</name>
 	<parent>
 		<groupId>br.com.layonvsg</groupId>
 		<artifactId>layonvsg-base-pom</artifactId>

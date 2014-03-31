@@ -5,7 +5,7 @@
 	<artifactId>layonvsg-base-pom</artifactId>
 	<version>01.00.00</version>
 	<packaging>pom</packaging>
-	<name>Laerson Base Pom</name>
+	<name>Módulo Base Pom</name>
 	<properties>
 		<aspectj.version>1.7.3</aspectj.version>
 		<hibernate.version>4.2.8.Final</hibernate.version>
