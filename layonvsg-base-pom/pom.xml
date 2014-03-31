@@ -12,7 +12,7 @@
 		<deltaspike.version>0.5</deltaspike.version>
 		<resteasy.version>3.0.5.Final</resteasy.version>
 		<github.global.server>github</github.global.server>
-	</properties >
+	</properties>
 	<distributionManagement>
 		<repository>
 			<id>github</id>
@@ -23,22 +23,6 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.7</version>
-					<executions>
-						<execution>
-							<id>default-deploy</id>
-							<phase>deploy</phase>
-							<goals>
-								<goal>deploy</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
-					</configuration>
-				</plugin>
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>2.5</version>
@@ -247,15 +231,15 @@
 					<artifactId>site-maven-plugin</artifactId>
 					<version>0.8</version>
 					<configuration>
-						<message>Maven artifacts for ${project.version}</message> 
+						<message>Maven artifacts for ${project.version}</message>
 						<noJekyll>true</noJekyll>
 						<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-						<branch>refs/heads/mvn-repo</branch>                      
+						<branch>refs/heads/mvn-repo</branch>
 						<includes>
 							<include>**/*</include>
 						</includes>
-						<repositoryName>${project.artifactId}</repositoryName>     
-						<repositoryOwner>laercioVieira</repositoryOwner>  
+						<repositoryName>${project.artifactId}</repositoryName>
+						<repositoryOwner>laercioVieira</repositoryOwner>
 					</configuration>
 					<executions>
 						<execution>

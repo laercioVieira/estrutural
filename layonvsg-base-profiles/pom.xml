@@ -763,23 +763,23 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<build>
-		<sourceDirectory>C:\workspaces\fgs\layonvsg-base-profiles\src\main\java</sourceDirectory>
-		<scriptSourceDirectory>C:\workspaces\fgs\layonvsg-base-profiles\src\main\scripts</scriptSourceDirectory>
-		<testSourceDirectory>C:\workspaces\fgs\layonvsg-base-profiles\src\test\java</testSourceDirectory>
-		<outputDirectory>C:\workspaces\fgs\layonvsg-base-profiles\target\classes</outputDirectory>
-		<testOutputDirectory>C:\workspaces\fgs\layonvsg-base-profiles\target\test-classes</testOutputDirectory>
+		<sourceDirectory>..\${project.artifactId}\src\main\java</sourceDirectory>
+		<scriptSourceDirectory>..\${project.artifactId}\src\main\scripts</scriptSourceDirectory>
+		<testSourceDirectory>..\${project.artifactId}\src\test\java</testSourceDirectory>
+		<outputDirectory>..\${project.artifactId}\target\classes</outputDirectory>
+		<testOutputDirectory>..\${project.artifactId}\target\test-classes</testOutputDirectory>
 		<resources>
 			<resource>
-				<directory>C:\workspaces\fgs\layonvsg-base-profiles\src\main\resources</directory>
+				<directory>..\${project.artifactId}\src\main\resources</directory>
 			</resource>
 		</resources>
 		<testResources>
 			<testResource>
-				<directory>C:\workspaces\fgs\layonvsg-base-profiles\src\test\resources</directory>
+				<directory>..\${project.artifactId}\src\test\resources</directory>
 			</testResource>
 		</testResources>
-		<directory>C:\workspaces\fgs\layonvsg-base-profiles\target</directory>
-		<finalName>layonvsg-base-profiles-01.00.00</finalName>
+		<directory>..\${project.artifactId}\target</directory>
+		<finalName>${project.artifactId}-${project.version}</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -924,7 +924,7 @@
 					<version>2.3</version>
 					<configuration>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
-						<webXml>C:\workspaces\fgs\layonvsg-base-profiles/src/main/webapp/WEB-INF/web.xml</webXml>
+						<webXml>..\${project.artifactId}/src/main/webapp/WEB-INF/web.xml</webXml>
 						<webResources>
 							<resource>
 								<directory>src/main/content</directory>
@@ -1119,6 +1119,9 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-site-plugin</artifactId>
@@ -1131,7 +1134,7 @@
 							<goal>site</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>C:\workspaces\fgs\layonvsg-base-profiles\target\site</outputDirectory>
+							<outputDirectory>..\${project.artifactId}\target\site</outputDirectory>
 							<reportPlugins>
 								<reportPlugin>
 									<groupId>org.apache.maven.plugins</groupId>
@@ -1147,7 +1150,7 @@
 							<goal>deploy</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>C:\workspaces\fgs\layonvsg-base-profiles\target\site</outputDirectory>
+							<outputDirectory>..\${project.artifactId}\target\site</outputDirectory>
 							<reportPlugins>
 								<reportPlugin>
 									<groupId>org.apache.maven.plugins</groupId>
@@ -1158,7 +1161,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<outputDirectory>C:\workspaces\fgs\layonvsg-base-profiles\target\site</outputDirectory>
+					<outputDirectory>..\${project.artifactId}\target\site</outputDirectory>
 					<reportPlugins>
 						<reportPlugin>
 							<groupId>org.apache.maven.plugins</groupId>
@@ -1170,7 +1173,7 @@
 		</plugins>
 	</build>
 	<reporting>
-		<outputDirectory>C:\workspaces\fgs\layonvsg-base-profiles\target\site</outputDirectory>
+		<outputDirectory>..\${project.artifactId}\target\site</outputDirectory>
 	</reporting>
 	<profiles>
 		<profile>
